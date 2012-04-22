@@ -4,7 +4,7 @@
   <title><![CDATA[TruePattern]]></title>
   <link href="http://truepattern.github.com/atom.xml" rel="self"/>
   <link href="http://truepattern.github.com/"/>
-  <updated>2012-04-22T01:34:55-07:00</updated>
+  <updated>2012-04-22T01:56:50-07:00</updated>
   <id>http://truepattern.github.com/</id>
   <author>
     <name><![CDATA[aras]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CSS references]]></title>
+    <link href="http://truepattern.github.com/blog/2012/04/22/css-references/"/>
+    <updated>2012-04-22T01:45:00-07:00</updated>
+    <id>http://truepattern.github.com/blog/2012/04/22/css-references</id>
+    <content type="html"><![CDATA[<p>Following is my shortlisted references to CSS layouts to use for new projects.</p>
+
+<ul>
+<li><a href="http://semantic.gs/">semantic.gs</a></li>
+<li><a href="http://adapt.960.gs/">960.gs</a></li>
+<li><a href="http://twitter.github.com/bootstrap/">bootstrap css from twitter</a></li>
+</ul>
+
+
+<p>A blog listing the top css layouts for responsive web:</p>
+
+<ul>
+<li><a href="http://idesignow.com/css/7-css-grid-layout-frameworks-for-responsive-web-design.html">7-css-grid-layout for responsive design</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting up this blog]]></title>

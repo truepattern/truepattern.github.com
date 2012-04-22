@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>TruePattern</title>
+    <title>CSS references - TruePattern</title>
     <meta name="author" content="aras">
 
     
@@ -64,13 +64,9 @@ bootstrap css from twitter A blog &hellip;">
 
 </header>
 	
-	<div id="content" class="inner">
-
-
-    <article class="post">
-    <h1 class="title"><a href="/blog/2012/04/22/css-references/">CSS References</a></h1>
-    <div class="entry">
-        <p>Following is my shortlisted references to CSS layouts to use for new projects.</p>
+	<div id="content" class="inner"><article class="post">
+    <h1 class="title">CSS References</h1>
+    <div class="entry"><p>Following is my shortlisted references to CSS layouts to use for new projects.</p>
 
 <ul>
 <li><a href="http://semantic.gs/">semantic.gs</a></li>
@@ -85,10 +81,7 @@ bootstrap css from twitter A blog &hellip;">
 <li><a href="http://idesignow.com/css/7-css-grid-layout-frameworks-for-responsive-web-design.html">7-css-grid-layout for responsive design</a></li>
 </ul>
 
-
-        
-        
-    </div>
+</div>
     <div class="meta">
         <div class="date">
 
@@ -113,93 +106,29 @@ bootstrap css from twitter A blog &hellip;">
 
 </div>
         
-        <span class="comments"><a href="/blog/2012/04/22/css-references/#disqus_thread">Comments</a></span>
+        <span class="comments"><a href="#disqus_thread">Comments</a></span>
         
     </div>
 </article>
-
-
-    <article class="post">
-    <h1 class="title"><a href="/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com/">Setting Up This Blog</a></h1>
-    <div class="entry">
-        <h2>Install octopress</h2>
-
-<ol>
-<li>Please follow the instructions as documented <a href="http://octopress.org/docs/deploying/github">here</a>.</li>
-<li>execute the following commands</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages
-</span><span class='line'>Enter the read/write url for your repository: git@github.com:&lt;your-id&gt;/&lt;git-path&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Also you can find very good documentation <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">here</a></li>
-</ul>
-
-
-<h2>Checkin the sources</h2>
-
-<p>BTW, dont forget to add the sources to a separate branch &#8216;sources&#8217;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
-</span><span class='line'>git commit -m 'blog sources'
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Updating blog</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake preview
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
-
-        
-        
-    </div>
-    <div class="meta">
-        <div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-21T18:20:00-07:00" pubdate data-updated="true">Apr 21<span>st</span>, 2012</time></div>
-        <div class="tags">
-
-<div class="cat">
-  
-    <a class='category' href='/blog/categories/blog/'>blog</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/setup/'>setup</a>
-  
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
 
-</div>
-        
-        <span class="comments"><a href="/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com/#disqus_thread">Comments</a></span>
-        
-    </div>
-</article>
 
-<nav id="pagenavi">
-    
-    
-    <a href="/blog/archives" class="center">Blog Archives</a>
-</nav></div>
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
 	<footer class="inner">Copyright &copy; 2012 TruePattern</footer>
 	<script src="/javascripts/jquery.fancybox.pack.js"></script>
 <script src="/javascripts/slash.js"></script>
@@ -209,7 +138,10 @@ bootstrap css from twitter A blog &hellip;">
       var disqus_shortname = 'truepattern';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://truepattern.github.com/blog/2012/04/22/css-references/';
+        var disqus_url = 'http://truepattern.github.com/blog/2012/04/22/css-references/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
