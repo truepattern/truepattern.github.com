@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>
+            http://truepattern.github.com/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com/
+        </loc>
+        <lastmod>2012-04-21T23:43:59-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://truepattern.github.com/blog/archives/</loc>
+        <lastmod>2012-04-21T23:43:59-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://truepattern.github.com/</loc>
+        <lastmod>2012-04-21T23:43:59-07:00</lastmod>
+    </url>
+</urlset>

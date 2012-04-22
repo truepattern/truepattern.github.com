@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[TruePattern]]></title>
+  <link href="http://truepattern.github.com/atom.xml" rel="self"/>
+  <link href="http://truepattern.github.com/"/>
+  <updated>2012-04-21T23:49:11-07:00</updated>
+  <id>http://truepattern.github.com/</id>
+  <author>
+    <name><![CDATA[aras]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up this blog]]></title>
+    <link href="http://truepattern.github.com/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com/"/>
+    <updated>2012-04-21T18:20:00-07:00</updated>
+    <id>http://truepattern.github.com/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com</id>
+    <content type="html"><![CDATA[<p>please refer to http://octopress.org/docs/deploying/github/
+rake setup_github_pages
+Enter the read/write url for your repository: git@github.com:truepattern/truepattern.github.com.git</p>
+]]></content>
+  </entry>
+  
+</feed>
