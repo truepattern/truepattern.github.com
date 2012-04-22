@@ -7,9 +7,10 @@
     <meta name="author" content="aras">
 
     
-    <meta name="description" content="Setting Up This Blog please refer to http://octopress.org/docs/deploying/github/
-rake setup_github_pages
-Enter the read/write url for your &hellip;">
+    <meta name="description" content="Setting Up This Blog Install octopress Please follow the instructions as documented here.
+execute the following commands 1
+2
+$ rake &hellip;">
     
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 
@@ -58,14 +59,44 @@ Enter the read/write url for your &hellip;">
     <article class="post">
     <h1 class="title"><a href="/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com/">Setting Up This Blog</a></h1>
     <div class="entry">
-        <p>please refer to http://octopress.org/docs/deploying/github/
-rake setup_github_pages
-Enter the read/write url for your repository: git@github.com:truepattern/truepattern.github.com.git
-A good documentation is also at http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one</p>
+        <h2>Install octopress</h2>
 
-<p>git add .
-git commit -m &#8216;blog sources&#8217;
-git push origin source</p>
+<ol>
+<li>Please follow the instructions as documented <a href="http://octopress.org/docs/deploying/github">here</a>.</li>
+<li>execute the following commands</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages
+</span><span class='line'>Enter the read/write url for your repository: git@github.com:&lt;your-id&gt;/&lt;git-path&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Also you can find very good documentation <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">here</a></li>
+</ul>
+
+
+<h2>Checkin the sources</h2>
+
+<p>BTW, dont forget to add the sources to a separate branch &#8216;sources&#8217;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m 'blog sources'
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Updating blog</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
 
         
         
