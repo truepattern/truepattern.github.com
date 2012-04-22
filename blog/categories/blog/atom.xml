@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog | TruePattern]]></title>
   <link href="http://truepattern.github.com/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://truepattern.github.com/"/>
-  <updated>2012-04-22T01:06:26-07:00</updated>
+  <updated>2012-04-22T01:08:21-07:00</updated>
   <id>http://truepattern.github.com/</id>
   <author>
     <name><![CDATA[aras]]></name>
@@ -45,6 +45,7 @@ git push origin source
 <p><code>
 rake generate
 rake preview
+rake deploy
 </code></p>
 ]]></content>
   </entry>
