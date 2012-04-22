@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[TruePattern]]></title>
-  <link href="http://truepattern.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: octopress | TruePattern]]></title>
+  <link href="http://truepattern.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://truepattern.github.com/"/>
   <updated>2012-04-22T00:13:41-07:00</updated>
   <id>http://truepattern.github.com/</id>
@@ -24,7 +24,7 @@ Enter the read/write url for your repository: git@github.com:truepattern/truepat
 A good documentation is also at http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one</p>
 
 <p>git add .
-git commit -m &#8216;blog sources&#8217;
+git commit -m 'blog sources'
 git push origin source</p>
 ]]></content>
   </entry>
