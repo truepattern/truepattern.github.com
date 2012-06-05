@@ -18,6 +18,11 @@ Enter the read/write url for your repository: git@github.com:<your-id>/<git-path
 ```
 * Also you can find very good documentation [here](http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one)
 
+## Adding new entry
+```
+rake new_post["Post Title"]
+```
+
 ## Checkin the sources
 BTW, dont forget to add the sources to a separate branch 'sources'
 ```
