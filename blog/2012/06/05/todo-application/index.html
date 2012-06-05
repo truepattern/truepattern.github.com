@@ -1,24 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[TruePattern]]></title>
-  <link href="http://truepattern.github.com/atom.xml" rel="self"/>
-  <link href="http://truepattern.github.com/"/>
-  <updated>2012-06-05T01:55:28-07:00</updated>
-  <id>http://truepattern.github.com/</id>
-  <author>
-    <name><![CDATA[aras]]></name>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Todo Application - TruePattern</title>
+    <meta name="author" content="aras">
+
     
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+    <meta name="description" content="Todo Application Lets say Hello, World to Node.js with a Todo app Goal To run a Todo Application that can capture Todo&#8217;s from user and save it &hellip;">
+    
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 
-  
-  <entry>
-    <title type="html"><![CDATA[Todo Application]]></title>
-    <link href="http://truepattern.github.com/blog/2012/06/05/todo-application/"/>
-    <updated>2012-06-05T01:01:00-07:00</updated>
-    <id>http://truepattern.github.com/blog/2012/06/05/todo-application</id>
-    <content type="html"><![CDATA[<h2>Lets say Hello, World to Node.js with a Todo app</h2>
+    <link href="/atom.xml" rel="alternate" title="TruePattern" type="application/atom+xml">
+    <link rel="canonical" href="">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+    
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30591977-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+	<header class="inner"><h1 class="left"><a href="/">TruePattern</a></h1>
+<nav class="menu left"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<div class="right">
+	<form class="search right" action="http://google.com/search" method="get">
+		<input class="left" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:truepattern.github.com">
+	</form>
+	<div class="social right">
+		
+		
+		
+		
+		<a class="github" href="https://github.com/truepattern" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</div>
+
+</header>
+	
+	<div id="content" class="inner"><article class="post">
+    <h1 class="title">Todo Application</h1>
+    <div class="entry"><h2>Lets say Hello, World to Node.js with a Todo app</h2>
 
 <h3>Goal</h3>
 
@@ -59,7 +105,7 @@
 
 <h3>Todo App</h3>
 
-<figure class='code'><figcaption><span>Todo model (todo_model.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_model.js'>download</a></figcaption>
+<figure class='code'><figcaption><span>Todo model (todo_model.js)</span> <a href='/downloads/code/todo_model.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -75,7 +121,7 @@
 
 <p>as you can see, the model part is trivial, similarly aonx provides crudHelpers for mongoose, which make the controller a straight forward express-resource hookup as given below</p>
 
-<figure class='code'><figcaption><span>Todo controller (todo_controller.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_controller.js'>download</a></figcaption>
+<figure class='code'><figcaption><span>Todo controller (todo_controller.js)</span> <a href='/downloads/code/todo_controller.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -127,7 +173,7 @@
 
 <p>please refer to express-resource module for the crud routing hookup. As a last step, we&#8217;ll bind the controllers to the url of our choice (todos/*)</p>
 
-<figure class='code'><figcaption><span>REST url (todo_url.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_url.js'>download</a></figcaption>
+<figure class='code'><figcaption><span>REST url (todo_url.js)</span> <a href='/downloads/code/todo_url.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// hookup the controller exported methods to this resource</span>
@@ -139,7 +185,7 @@
 
 <p>Now, the part where we want to make sure all the REST part is working fine. Similar to aonx, I have put together a mocha wrapper for crudTesting called <a href="http://github.com/truepattern/berry">berry</a>. Its like just give the url and a sample object, it would verify create, read, update and delete. The sample unit test code is as follows</p>
 
-<figure class='code'><figcaption><span>Unit Test (todo_test.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_test.js'>download</a></figcaption>
+<figure class='code'><figcaption><span>Unit Test (todo_test.js)</span> <a href='/downloads/code/todo_test.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -191,84 +237,76 @@
 <h2>Todo Client</h2>
 
 <p>I have copied the todo mvc client (backbone.js based) from <a href="http://addyosmani.github.com/todomvc/">here</a>. Just one change, instead of localstorage, now the client points to the localhost server. You can see the client by going to browser localhost:8080/index.html</p>
-]]></content>
-  </entry>
+</div>
+    <div class="meta">
+        <div class="date">
+
+
+
+
+
+
+
+
   
-  <entry>
-    <title type="html"><![CDATA[CSS references]]></title>
-    <link href="http://truepattern.github.com/blog/2012/04/22/css-references/"/>
-    <updated>2012-04-22T01:45:00-07:00</updated>
-    <id>http://truepattern.github.com/blog/2012/04/22/css-references</id>
-    <content type="html"><![CDATA[<p>Following is my shortlisted references to CSS layouts to use for new projects.</p>
-
-<ul>
-<li><a href="http://semantic.gs/">semantic.gs</a></li>
-<li><a href="http://adapt.960.gs/">960.gs</a></li>
-<li><a href="http://twitter.github.com/bootstrap/">bootstrap css from twitter</a></li>
-</ul>
 
 
-<p>A blog listing the top css layouts for responsive web:</p>
+<time datetime="2012-06-05T01:01:00-07:00" pubdate data-updated="true">Jun 5<span>th</span>, 2012</time></div>
+        <div class="tags">
 
-<ul>
-<li><a href="http://idesignow.com/css/7-css-grid-layout-frameworks-for-responsive-web-design.html">7-css-grid-layout for responsive design</a></li>
-</ul>
-
-]]></content>
-  </entry>
+<div class="cat">
   
-  <entry>
-    <title type="html"><![CDATA[Setting up this blog]]></title>
-    <link href="http://truepattern.github.com/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com/"/>
-    <updated>2012-04-21T18:20:00-07:00</updated>
-    <id>http://truepattern.github.com/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com</id>
-    <content type="html"><![CDATA[<h2>Install octopress</h2>
-
-<ol>
-<li>Please follow the instructions as documented <a href="http://octopress.org/docs/deploying/github">here</a>.</li>
-<li>execute the following commands</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages
-</span><span class='line'>Enter the read/write url for your repository: git@github.com:&lt;your-id&gt;/&lt;git-path&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Also you can find very good documentation <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">here</a></li>
-</ul>
-
-
-<h2>Adding new entry</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["Post Title"]</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Checkin the sources</h2>
-
-<p>BTW, dont forget to add the sources to a separate branch &#8216;sources&#8217;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
-</span><span class='line'>git commit -m 'blog sources'
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Updating blog</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake preview
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
+    <a class='category' href='/blog/categories/nodejs/'>nodejs</a>, <a class='category' href='/blog/categories/rest/'>rest</a>, <a class='category' href='/blog/categories/server/'>server</a>, <a class='category' href='/blog/categories/todo/'>todo</a>
   
-</feed>
+</div>
+
+</div>
+        
+        <span class="comments"><a href="#disqus_thread">Comments</a></span>
+        
+    </div>
+</article>
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer class="inner">Copyright &copy; 2012 TruePattern</footer>
+	<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script src="/javascripts/slash.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'truepattern';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://truepattern.github.com/blog/2012/06/05/todo-application/';
+        var disqus_url = 'http://truepattern.github.com/blog/2012/06/05/todo-application/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+</html>

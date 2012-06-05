@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[TruePattern]]></title>
-  <link href="http://truepattern.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: server | TruePattern]]></title>
+  <link href="http://truepattern.github.com/blog/categories/server/atom.xml" rel="self"/>
   <link href="http://truepattern.github.com/"/>
   <updated>2012-06-05T01:55:28-07:00</updated>
   <id>http://truepattern.github.com/</id>
@@ -23,7 +23,7 @@
 <h3>Goal</h3>
 
 <ul>
-<li>To run a Todo Application that can capture Todo&#8217;s from user and save it on server (persist)</li>
+<li>To run a Todo Application that can capture Todo's from user and save it on server (persist)</li>
 </ul>
 
 
@@ -42,24 +42,24 @@
 
 <h2>Todo Server</h2>
 
-<p>There are some cool frameworks for Node coming up every day and its a fast changing landscape. To keep things simple, we&#8217;ll base our technologies on a robust ground with proven technologies like ExpressJS and MongooseJS.  I have written a wrapper over both of these proven technologies (common settings that would help you bootstrap your application quicker) in <a href="http://github.com/truepattern/aonx">aonx</a>.</p>
+<p>There are some cool frameworks for Node coming up every day and its a fast changing landscape. To keep things simple, we'll base our technologies on a robust ground with proven technologies like ExpressJS and MongooseJS.  I have written a wrapper over both of these proven technologies (common settings that would help you bootstrap your application quicker) in <a href="http://github.com/truepattern/aonx">aonx</a>.</p>
 
 <h3>Directory structure</h3>
 
-<p>I prefer a very modular approach, where all the models, controllers and views are self contained within a directory (similar to django) and that way it could be potentially reused elsewhere. So we&#8217;ll go with a structure</p>
+<p>I prefer a very modular approach, where all the models, controllers and views are self contained within a directory (similar to django) and that way it could be potentially reused elsewhere. So we'll go with a structure</p>
 
 <ul>
-<li>apps &#8211; contains todo module</li>
-<li>config &#8211; config for todo server</li>
-<li>public &#8211; client side js, css, etc.,</li>
-<li>test &#8211; mocha tests</li>
-<li>server.js  &#8211; main server js file</li>
+<li>apps -- contains todo module</li>
+<li>config -- config for todo server</li>
+<li>public -- client side js, css, etc.,</li>
+<li>test -- mocha tests</li>
+<li>server.js  -- main server js file</li>
 </ul>
 
 
 <h3>Todo App</h3>
 
-<figure class='code'><figcaption><span>Todo model (todo_model.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_model.js'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Todo model (todo_model.js)</span> <a href='/downloads/code/todo_model.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -70,12 +70,11 @@
 </span><span class='line'>    <span class="nx">done</span> <span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span><span class="nb">Boolean</span><span class="p">,</span> <span class="k">default</span><span class="o">:</span> <span class="kc">false</span>  <span class="p">},</span>
 </span><span class='line'>    <span class="nx">order</span>  <span class="o">:</span> <span class="nb">Number</span>
 </span><span class='line'>  <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>as you can see, the model part is trivial, similarly aonx provides crudHelpers for mongoose, which make the controller a straight forward express-resource hookup as given below</p>
 
-<figure class='code'><figcaption><span>Todo controller (todo_controller.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_controller.js'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Todo controller (todo_controller.js)</span> <a href='/downloads/code/todo_controller.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -122,24 +121,22 @@
 </span><span class='line'><span class="nx">exports</span><span class="p">.</span><span class="nx">destroy</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
 </span><span class='line'>  <span class="nx">Todo</span><span class="p">.</span><span class="nx">removeObject</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">todo</span><span class="p">,</span> <span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">);</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
+<p>please refer to express-resource module for the crud routing hookup. As a last step, we'll bind the controllers to the url of our choice (todos/*)</p>
 
-<p>please refer to express-resource module for the crud routing hookup. As a last step, we&#8217;ll bind the controllers to the url of our choice (todos/*)</p>
-
-<figure class='code'><figcaption><span>REST url (todo_url.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_url.js'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>REST url (todo_url.js)</span> <a href='/downloads/code/todo_url.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// hookup the controller exported methods to this resource</span>
 </span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">resource</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./controllers&#39;</span><span class="p">));</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>Testing</h3>
 
 <p>Now, the part where we want to make sure all the REST part is working fine. Similar to aonx, I have put together a mocha wrapper for crudTesting called <a href="http://github.com/truepattern/berry">berry</a>. Its like just give the url and a sample object, it would verify create, read, update and delete. The sample unit test code is as follows</p>
 
-<figure class='code'><figcaption><span>Unit Test (todo_test.js)</span> <a href='http://truepattern.github.com/downloads/code/todo_test.js'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Unit Test (todo_test.js)</span> <a href='/downloads/code/todo_test.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -148,126 +145,38 @@
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">todoObj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="s1">&#39;Hello Todo&#39;</span><span class="p">};</span>
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">todoObj1</span> <span class="o">=</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="s1">&#39;Updated Hello Todo&#39;</span><span class="p">};</span>
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">crudfn</span> <span class="o">=</span> <span class="nx">berry</span><span class="p">.</span><span class="nx">crudTester</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">todoObj</span><span class="p">,</span> <span class="nx">todoObj1</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>Run the server</h3>
 
-<p>Now that you have made it so far, following are the instructions to run the todo server</p>
+<p>Now that you have made it so far, following are the instructions to run the todo server
+```</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># make sure node, npm, mongodb are installed
-</span><span class='line'>git clone https://github.com/truepattern/todo-server.git
-</span><span class='line'>cd todo-server
-</span><span class='line'>npm install -d
-</span><span class='line'>
-</span><span class='line'># lets run unit tests
-</span><span class='line'>make
-</span><span class='line'>
-</span><span class='line'># run the server
-</span><span class='line'>node server.js
-</span><span class='line'>
-</span><span class='line'># go to another terminal
-</span><span class='line'>curl localhost:8080/api/v1/todos
-</span><span class='line'>curl localhost:8080/api/v1/todos/new?content=hello
-</span><span class='line'>curl localhost:8080/api/v1/todos
-</span></code></pre></td></tr></table></div></figure>
+<h1>make sure node, npm, mongodb are installed</h1>
 
+<p>git clone https://github.com/truepattern/todo-server.git
+cd todo-server
+npm install -d</p>
+
+<h1>lets run unit tests</h1>
+
+<p>make</p>
+
+<h1>run the server</h1>
+
+<p>node server.js</p>
+
+<h1>go to another terminal</h1>
+
+<p>curl localhost:8080/api/v1/todos
+curl localhost:8080/api/v1/todos/new?content=hello
+curl localhost:8080/api/v1/todos</p>
+
+<p>```</p>
 
 <h2>Todo Client</h2>
 
 <p>I have copied the todo mvc client (backbone.js based) from <a href="http://addyosmani.github.com/todomvc/">here</a>. Just one change, instead of localstorage, now the client points to the localhost server. You can see the client by going to browser localhost:8080/index.html</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[CSS references]]></title>
-    <link href="http://truepattern.github.com/blog/2012/04/22/css-references/"/>
-    <updated>2012-04-22T01:45:00-07:00</updated>
-    <id>http://truepattern.github.com/blog/2012/04/22/css-references</id>
-    <content type="html"><![CDATA[<p>Following is my shortlisted references to CSS layouts to use for new projects.</p>
-
-<ul>
-<li><a href="http://semantic.gs/">semantic.gs</a></li>
-<li><a href="http://adapt.960.gs/">960.gs</a></li>
-<li><a href="http://twitter.github.com/bootstrap/">bootstrap css from twitter</a></li>
-</ul>
-
-
-<p>A blog listing the top css layouts for responsive web:</p>
-
-<ul>
-<li><a href="http://idesignow.com/css/7-css-grid-layout-frameworks-for-responsive-web-design.html">7-css-grid-layout for responsive design</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setting up this blog]]></title>
-    <link href="http://truepattern.github.com/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com/"/>
-    <updated>2012-04-21T18:20:00-07:00</updated>
-    <id>http://truepattern.github.com/blog/2012/04/21/setting-up-truepattern-dot-github-dot-com</id>
-    <content type="html"><![CDATA[<h2>Install octopress</h2>
-
-<ol>
-<li>Please follow the instructions as documented <a href="http://octopress.org/docs/deploying/github">here</a>.</li>
-<li>execute the following commands</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages
-</span><span class='line'>Enter the read/write url for your repository: git@github.com:&lt;your-id&gt;/&lt;git-path&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Also you can find very good documentation <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">here</a></li>
-</ul>
-
-
-<h2>Adding new entry</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["Post Title"]</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Checkin the sources</h2>
-
-<p>BTW, dont forget to add the sources to a separate branch &#8216;sources&#8217;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
-</span><span class='line'>git commit -m 'blog sources'
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Updating blog</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake preview
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   

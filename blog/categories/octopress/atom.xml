@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | TruePattern]]></title>
   <link href="http://truepattern.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://truepattern.github.com/"/>
-  <updated>2012-04-22T01:56:50-07:00</updated>
+  <updated>2012-06-05T01:55:28-07:00</updated>
   <id>http://truepattern.github.com/</id>
   <author>
     <name><![CDATA[aras]]></name>
@@ -30,6 +30,12 @@ Enter the read/write url for your repository: git@github.com:&lt;your-id&gt;/&lt
 <li>Also you can find very good documentation <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">here</a></li>
 </ol>
 
+
+<h2>Adding new entry</h2>
+
+<p><code>
+rake new_post["Post Title"]
+</code></p>
 
 <h2>Checkin the sources</h2>
 
