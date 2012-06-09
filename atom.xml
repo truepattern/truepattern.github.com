@@ -4,7 +4,7 @@
   <title><![CDATA[TruePattern]]></title>
   <link href="http://truepattern.github.com/atom.xml" rel="self"/>
   <link href="http://truepattern.github.com/"/>
-  <updated>2012-06-05T01:55:28-07:00</updated>
+  <updated>2012-06-09T02:49:20-07:00</updated>
   <id>http://truepattern.github.com/</id>
   <author>
     <name><![CDATA[aras]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[node.js on heroku]]></title>
+    <link href="http://truepattern.github.com/blog/2012/06/09/node-dot-js-on-heroku/"/>
+    <updated>2012-06-09T02:04:00-07:00</updated>
+    <id>http://truepattern.github.com/blog/2012/06/09/node-dot-js-on-heroku</id>
+    <content type="html"><![CDATA[<p>In order to showcase node.js app to external world, the simplest way is to embrace heroku. Following are the simple steps to deploy our <a href="http://truepattern.com/blog/2012/06/05/todo-application">Todo App</a> done before.</p>
+
+<h2>Deploy a node.js app to heroku</h2>
+
+<p>Refer to the following links that I found very useful</p>
+
+<ul>
+<li><a href="https://devcenter.heroku.com/articles/nodejs">heroku cedar page</a></li>
+<li><a href="http://blog.superpat.com/2011/11/15/running-your-own-node-js-version-on-heroku/">running own node.js version</a></li>
+</ul>
+
+
+<!-- more -->
+
+
+<h3>Key generation</h3>
+
+<p>First thing is to register with heroku and generate ssh keys for your e-mail id that you registered with heroku</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-keygen -t rsa -C "your-email-id-here"
+</span><span class='line'>heroku keys:add</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Create app on heroku</h3>
+
+<p>Following steps would create the app on heroku and set the node.js to 0.6.x</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># create the app
+</span><span class='line'>heroku create --stack cedar aonx-todo
+</span><span class='line'>
+</span><span class='line'># set node.js build to 0.6.x
+</span><span class='line'>heroku config:add BUILDPACK_URL=http://github.com/liquid/heroku-buildpack-nodejs.git
+</span><span class='line'># set to production
+</span><span class='line'>heroku config:add NODE_ENV=production
+</span><span class='line'># get a free mongodb addon
+</span><span class='line'>heroku addons:add mongohq:free
+</span><span class='line'>
+</span><span class='line'># deploy to production
+</span><span class='line'>git push heroku master
+</span><span class='line'>
+</span><span class='line'># important, dont forget this
+</span><span class='line'>heroku ps:scale web=1
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>run server</h3>
+
+<p>Actually its already running, on any changes just do the following</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git push heroku master</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>You can <a href="http://aonx-todo.herokuapp.com">click here to see the todo app running</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Todo Application]]></title>

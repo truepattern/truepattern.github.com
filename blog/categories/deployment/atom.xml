@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: deployment | TruePattern]]></title>
+  <link href="http://truepattern.github.com/blog/categories/deployment/atom.xml" rel="self"/>
+  <link href="http://truepattern.github.com/"/>
+  <updated>2012-06-09T02:49:20-07:00</updated>
+  <id>http://truepattern.github.com/</id>
+  <author>
+    <name><![CDATA[aras]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[node.js on heroku]]></title>
+    <link href="http://truepattern.github.com/blog/2012/06/09/node-dot-js-on-heroku/"/>
+    <updated>2012-06-09T02:04:00-07:00</updated>
+    <id>http://truepattern.github.com/blog/2012/06/09/node-dot-js-on-heroku</id>
+    <content type="html"><![CDATA[<p>In order to showcase node.js app to external world, the simplest way is to embrace heroku. Following are the simple steps to deploy our <a href="http://truepattern.com/blog/2012/06/05/todo-application">Todo App</a> done before.</p>
+
+<h2>Deploy a node.js app to heroku</h2>
+
+<p>Refer to the following links that I found very useful</p>
+
+<ul>
+<li><a href="https://devcenter.heroku.com/articles/nodejs">heroku cedar page</a></li>
+<li><a href="http://blog.superpat.com/2011/11/15/running-your-own-node-js-version-on-heroku/">running own node.js version</a></li>
+</ul>
+
+
+<!-- more -->
+
+
+<h3>Key generation</h3>
+
+<p>First thing is to register with heroku and generate ssh keys for your e-mail id that you registered with heroku
+<code>
+ssh-keygen -t rsa -C "your-email-id-here"
+heroku keys:add
+</code></p>
+
+<h3>Create app on heroku</h3>
+
+<p>Following steps would create the app on heroku and set the node.js to 0.6.x
+```</p>
+
+<h1>create the app</h1>
+
+<p>heroku create --stack cedar aonx-todo</p>
+
+<h1>set node.js build to 0.6.x</h1>
+
+<p>heroku config:add BUILDPACK_URL=http://github.com/liquid/heroku-buildpack-nodejs.git</p>
+
+<h1>set to production</h1>
+
+<p>heroku config:add NODE_ENV=production</p>
+
+<h1>get a free mongodb addon</h1>
+
+<p>heroku addons:add mongohq:free</p>
+
+<h1>deploy to production</h1>
+
+<p>git push heroku master</p>
+
+<h1>important, dont forget this</h1>
+
+<p>heroku ps:scale web=1</p>
+
+<p>```</p>
+
+<h3>run server</h3>
+
+<p>Actually its already running, on any changes just do the following
+<code>
+git push heroku master
+</code></p>
+
+<ul>
+<li>You can <a href="http://aonx-todo.herokuapp.com">click here to see the todo app running</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
