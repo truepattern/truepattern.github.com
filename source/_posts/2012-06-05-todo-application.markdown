@@ -3,12 +3,11 @@ layout: post
 title: "Todo Application"
 date: 2012-06-05 01:01
 comments: true
-categories: nodejs rest todo mvc
 categories:
 - nodejs
-- rest
+- REST
 - server
-- todo
+- todo-app
 
 ---
 ## Lets say Hello, World to Node.js with a Todo app
